@@ -14,6 +14,8 @@ add_definitions(-DROOT_DIR=\"${CMAKE_CURRENT_SOURCE_DIR}/\")
 
 # Include directories
 include_directories(${PROJECT_SOURCE_DIR}/include /usr/include/eigen3)
+include_directories($ENV{CONDA_PREFIX}/include)
+include_directories($ENV{CONDA_PREFIX}/include/eigen3)
 
 # Source files
 set(SOURCE_FILES
