@@ -1,8 +1,8 @@
 # uav parameters
 uav:
   # crazyflie has a max thrust of 0.45N -> a = F/m = 0.45 / 0.033 = 13.64
-  maximum_acceleration_norm: 13.64     # [m/s^2] a = F / m
-  maximum_velocity: 20.0                # [m/s], important to set accordingly when considering drag
+  maximum_acceleration_norm: 12.64   # [m/s^2] a = F / m
+  maximum_velocity: 10.0    # [m/s], important to set accordingly when considering drag
   gravitational_acceleration: 9.8066    # [m/s^s]
   drag_coefficients: [0.28, 0.35, 0.7]  # set thrust_decomposition->drag to true if it is to be utilized
 
@@ -24,7 +24,7 @@ velocity_optimization:
     alpha_reduction_factor: 0.1   # GD step size reduction factor
     alpha_min_threshold: 0.01     # threshold for GD step size
     max_iter: 20                  # maximum number of iterations
-  dT_precision: 0.001             # [s] optimization termination condition, when the reduction of the total trajectory duration after an velocity optimization update falls below this threshold, the optimization is terminated 
+  dT_precision: 0.01             # [s] optimization termination condition, when the reduction of the total trajectory duration after an velocity optimization update falls below this threshold, the optimization is terminated 
 
 # debug prints
 debug: false
