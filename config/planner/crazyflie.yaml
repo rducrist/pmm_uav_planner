@@ -2,9 +2,9 @@
 uav:
   # crazyflie has a max thrust of 0.45N -> a = F/m = 0.45 / 0.033 = 13.64
   maximum_acceleration_norm: 12.64   # [m/s^2] a = F / m
-  maximum_velocity: 10.0    # [m/s], important to set accordingly when considering drag
+  maximum_velocity: 4.0    # [m/s], important to set accordingly when considering drag
   gravitational_acceleration: 9.8066    # [m/s^s]
-  drag_coefficients: [0.28, 0.35, 0.7]  # set thrust_decomposition->drag to true if it is to be utilized
+  drag_coefficients: [0.28, 0.35, 1.7]  # set thrust_decomposition->drag to true if it is to be utilized
 
 # limited thrust decomposition (LTD) parameters
 thrust_decomposition:
